@@ -64,27 +64,6 @@ function blaze_theme_images() {
 add_action( 'after_setup_theme', 'blaze_theme_images' );
 
 
-// Widgets
-
-function create_widget($name, $id, $description) {
-  register_sidebar(array(
-    'name' => __( $name ),
-    'id'   => $id,
-    'description' => __( $description ),
-    'before_widget' => '<div class="widget">',
-    'after_widget' => '</div>',
-    'before_title' => '<h3>',
-    'after_title' => '</h3>'
-  ));
-}
-create_widget( 'Footer Left', 'footer-left', 'Displays on the left of the footer' );
-create_widget( 'Footer Mid', 'footer-mid', 'Displays on the middle of the footer' );
-create_widget( 'Footer Right', 'footer-right', 'Displays on the right of the footer' );
-
-create_widget( 'Default Sidebar', 'sidebar-default', 'Your common or garden sidebar' );
-create_widget( 'Blog Sidebar', 'blog', 'Sidebar for blog list page' );
-
-
 // Better excerpt links
 
 function new_excerpt_more( $more ) {
