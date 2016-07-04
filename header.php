@@ -25,8 +25,9 @@
           <nav class="navbar navbar-static-top">
             <div class="container">
               <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#header-navbar-collapse" aria-expanded="false">
-                  <span class="sr-only">Toggle navigation</span>
+                <h4 class="visible-xs-block text-center"><?php _e('Toggle Navigation', 'DevoConnect'); ?></h4>
+                <button type="button" class="navbar-toggle visible-xs-block collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+                  <span class="sr-only">navigation</span>
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>

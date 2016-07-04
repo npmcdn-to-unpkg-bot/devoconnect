@@ -10,6 +10,19 @@
 		text-decoration: none;
 	}
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: bold;
+	color: $main;
+
+	> a {
+		color: $main;
+	}
+}
 .row-high {
 	margin-top: $moreverticalrhythym;
 	margin-bottom: $moreverticalrhythym;
@@ -23,6 +36,19 @@
 	flex-direction: column;
 	justify-content: center;
 }
+.flex-row {
+	flex-direction: row;
+}
+.text-main {
+	color: $main;
+}
+.text-accent {
+	color: $mainAccent;
+}
+.text-uppercase {
+	text-transform: uppercase;
+}
+
 @media (min-width: 768px){
 	.flex {
 		// has to go in a mq otherwise creates overflow issues on small viewports

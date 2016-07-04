@@ -32,6 +32,27 @@ function theme_js() {
 }
 add_action('wp_enqueue_scripts', 'theme_js');
 
+/**
+ * Filter the except length to 20 characters.
+ *
+ * @param int $length Excerpt length.
+ * @return int (Maybe) modified excerpt length.
+ */
+function devoconnect_custom_excerpt_length( $length ) {
+    return 20;
+}
+add_filter( 'excerpt_length', 'devoconnect_custom_excerpt_length', 999 );
+
+
+add_action( 'edit_form_after_title', 'rgc_posts_page_edit_form' );
+function rgc_posts_page_edit_form( $post ) {
+	$posts_page = get_option( 'page_for_posts' );
+	if ( $posts_page === $post->ID ) {
+		add_post_type_support( 'page', 'editor' );
+	}
+}
+
+
 
 // Add SVG capabilities
 

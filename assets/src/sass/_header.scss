@@ -5,12 +5,27 @@ a.header-logo {
 }
 .navbar {
 	background-color: $main;
+	margin-bottom: 0;
 
 	.navbar-header {
 
+		> h4 {
+			color: white;
+		}
+
+		.navbar-toggle {
+			border: 1px solid white;
+			display: block;
+			float: none;
+		    margin: 15px auto;
+		}
+		
+		.navtext {
+			color: white;
+			font-weight: bold;
+		}
 
 		.navbar-nav {
-
 
 			> li {
 
@@ -27,7 +42,7 @@ a.header-logo {
 			}
 		}
 	}
-	@media (min-width: 480px){
+	@media (min-width: 768px){
 
 		.navbar-header {
 			float: none;
