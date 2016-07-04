@@ -37,7 +37,7 @@ body {
 }
 .navbar-nav {
 	> .current-menu-item > a, .current-menu-parent > a {
-		background: #000;
+		background: $mainAccent;
 	}
 	> .current-menu-parent li a {
 		background: inherit;
@@ -48,7 +48,7 @@ body {
 	}
 }
 .navbar-inverse .navbar-toggle span {
-	color: #999;
+	color: $mainAccent;
 }
 .searchform {
 

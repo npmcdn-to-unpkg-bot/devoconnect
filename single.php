@@ -1,9 +1,9 @@
 <?php
 /**
- * Description: Front Page template
+ * Description: Single Blog template
  *
  * @package    WordPress
- * @subpackage BlazeBase
+ * @subpackage DevoConnect
  */
 get_header(); ?>
 

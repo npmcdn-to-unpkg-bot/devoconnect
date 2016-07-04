@@ -3,7 +3,7 @@
  * Description: Blog Category listing template
  *
  * @package    WordPress
- * @subpackage BlazeBase
+ * @subpackage DevoConnect
  */
 get_header(); ?>
 

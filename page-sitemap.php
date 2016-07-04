@@ -2,6 +2,9 @@
 /**
  * Template Name: Sitemap
  *
+ * @package    WordPress
+ * @subpackage DevoConnect
+ *
  */
 get_header(); ?>
 <div class="container">

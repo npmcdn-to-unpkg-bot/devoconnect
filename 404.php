@@ -3,7 +3,7 @@
  * Description: 404 not found template
  *
  * @package    WordPress
- * @subpackage BlazeBase
+ * @subpackage DevoConnect
  */
 get_header(); ?>
 <div class="container">

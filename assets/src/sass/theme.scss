@@ -1,22 +1,32 @@
 // FONT: enqueue via functions.php
+$font-family-sans-serif: 'Raleway', sans-serif;
 
-// Vars - here so we can override some Bootstrap defaults
-$font-family-sans-serif: sans-serif;
+// Vertical rhythym - helps legibility
 $verticalrhythym: 15px;
 $moreverticalrhythym: $verticalrhythym * 2;
-$main: #E74B00; $brand-primary: $main;
-$mainAccent: darken( $main, 20% );
+
+// Colours
+$main: #009DA9; $brand-primary: $main;
+$mainAccent: #0065B1;
 $link-color: black;
 $link-hover-color: $mainAccent;
-$sub: #474747;
-$subAccent: darken( $sub, 20% );
-$subLighten: lighten( $sub, 20% );
+
+$devoPurple: #4B175F;
+$devoGreen: #006327;
+
 
 // bootstrap
 @import 'bootstrap';
 
 // theme
-@import '_project';
-@import '_animations';
-@import '_browserfixes';
-@import '_blazebase';
+@import 'project';
+@import 'animations';
+@import 'browserfixes';
+@import 'blazebase';
+
+// partials
+@import 'header';
+
+// pages
+
+@import 'frontpage';

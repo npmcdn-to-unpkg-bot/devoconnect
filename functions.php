@@ -1,9 +1,13 @@
 <?php
 // this theme is translateable
-load_theme_textdomain( 'blazebase', get_template_directory() . '/languages' );
+load_theme_textdomain( 'DevoConnect', get_template_directory() . '/languages' );
 
 // CSS
 function theme_styles() {
+  
+  // fonts - from Google CDN
+  wp_enqueue_style('theme_fonts', '//fonts.googleapis.com/css?family=Raleway:400,700');
+  
   // local styles
   wp_enqueue_style('theme_css', get_template_directory_uri() . '/assets/css/styles.min.css');
 }

@@ -1,0 +1,53 @@
+a.header-logo {
+	display: block;
+	text-align: center;
+	margin: 20px 0;
+}
+.navbar {
+	background-color: $main;
+
+	.navbar-header {
+
+
+		.navbar-nav {
+
+
+			> li {
+
+				a {
+					transition: all 1s linear;
+					color: white;
+
+					&:hover,
+					&:active {
+						color: $mainAccent;
+						transition: all 1s linear;
+					}
+				}
+			}
+		}
+	}
+	@media (min-width: 480px){
+
+		.navbar-header {
+			float: none;
+
+			.navbar-nav {
+				float: none;
+				display: flex;
+				justify-content: center;
+
+				> li {
+
+					a {
+
+						&:hover,
+						&:active {
+
+						}
+					}
+				}
+			}	
+		}
+	}
+}
