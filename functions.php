@@ -15,7 +15,12 @@ add_action( 'wp_enqueue_scripts', 'theme_styles');
 
 // JavaScript
 function theme_js() {
-
+	
+	wp_deregister_script('jquery');
+	wp_register_script('jquery', ("//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"), false, '1.11.1', false);
+	wp_enqueue_script('jquery');	
+	
+	
   // Conditionals for legacy IE browsers
   global $wp_scripts;
 
@@ -25,10 +30,21 @@ function theme_js() {
   $wp_scripts->add_data('html5_shiv', 'conditional', 'lt IE 9');
   $wp_scripts->add_data('respond_js', 'conditional', 'lt IE 9');
   
+  if (is_home()) {
+	wp_enqueue_script('theme_footer_js', get_template_directory_uri() . 'https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js', array('jquery'), null, true);  
+	wp_enqueue_script('theme_footer_js', get_template_directory_uri() . '/assets/js/project-footerscripts.min.js', array('jquery'), '', true);
+  }
+  
   // Theme JS and jQuery
   wp_enqueue_script('theme_header_js', get_template_directory_uri() . '/assets/js/project-headerscripts.min.js', array('jquery'), '', false);
   wp_enqueue_script('theme_footer_js', get_template_directory_uri() . '/assets/js/project-footerscripts.min.js', array('jquery'), '', true);
 
+  if (is_home()) {
+	wp_enqueue_script('masonry_js', get_template_directory_uri() . 'https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js', array('jquery'), null, true);  
+	wp_enqueue_script('theme_intelligence_js', get_template_directory_uri() . '/assets/js/project-intelligence.min.js', array('jquery'), '', true);
+  }
+  
+  
 }
 add_action('wp_enqueue_scripts', 'theme_js');
 
@@ -291,6 +307,22 @@ add_action('wp_print_styles', 'remove_all_jp_css' );
 // Remove emojis
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 remove_action( 'wp_print_styles', 'print_emoji_styles' );
+
+// Widgets
+function web_widgets_init() {
+
+	register_sidebar( array(
+		'name'          => 'Sidebar',
+		'id'            => 'default-sidebar',
+		'before_widget' => '<div class="sidebar-widget">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2>',
+		'after_title'   => '</h2>',
+	) );
+}
+add_action( 'widgets_init', 'web_widgets_init' );
+
+
 
 // REMOVE ALL THE comments
 // Disable support for comments and trackbacks in post types

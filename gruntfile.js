@@ -38,6 +38,7 @@ module.exports = function(grunt) {
       files: {
         'assets/js/project-headerscripts.js': ['assets/src/js/header/*.js'],
         'assets/js/project-footerscripts.js': ['assets/src/js/footer/*.js'],
+		'assets/js/project-intelligencescripts.js': ['assets/src/js/intelligence/*.js'],
       },
     },
   },
@@ -45,7 +46,8 @@ module.exports = function(grunt) {
     my_target: {
       files: {
         'assets/js/project-headerscripts.min.js': ['assets/js/project-headerscripts.js'],
-        'assets/js/project-footerscripts.min.js': ['assets/js/project-footerscripts.js']
+        'assets/js/project-footerscripts.min.js': ['assets/js/project-footerscripts.js'],
+		'assets/js/project-intelligencescripts.min.js': ['assets/js/project-intelligencescripts.js'],
       }
     }
   },
