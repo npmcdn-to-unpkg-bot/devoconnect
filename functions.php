@@ -67,7 +67,6 @@ function rgc_posts_page_edit_form( $post ) {
 
 
 // Add SVG capabilities
-
 function blaze_svg_mime_type( $mimes = array() ) {
   $mimes['svg']  = 'image/svg+xml';
   $mimes['svgz'] = 'image/svg+xml';
@@ -79,7 +78,6 @@ add_filter( 'upload_mimes', 'blaze_svg_mime_type' );
 add_filter( 'wpcf7_load_css', '__return_false' );
 
 // Additional menus
-
 add_theme_support('menus');
 
 function register_theme_menus() {
@@ -100,14 +98,11 @@ function blaze_theme_images() {
 }
 add_action( 'after_setup_theme', 'blaze_theme_images' );
 
-
 // Better excerpt links
-
 function new_excerpt_more( $more ) {
 	return ' ... <br><a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('<br/>Read More &raquo;', 'your-text-domain') . '</a>';
 }
 add_filter( 'excerpt_more', 'new_excerpt_more' );
-
 
 function filter_post_thumbnail_html( $html ) {
 // If there is no post thumbnail,
@@ -130,7 +125,6 @@ function first_and_last_menu_class($items) {
 
 
 // Breadcrumbs - see https://github.com/rachelbaker/bootstrapwp-Twitter-Bootstrap-for-WordPress
-
 function bootstrapwp_breadcrumbs() {
 	$home   = 'Home'; // text for the 'Home' link
 	$before = '<li class="active">'; // tag before the current crumb
@@ -243,7 +237,6 @@ function bootstrapwp_breadcrumbs() {
 
 
 // Pagination
-
 function blaze_paginate($query = '') {
 
     global $wp_query;
@@ -303,6 +296,23 @@ add_action('wp_print_styles', 'remove_all_jp_css' );
 // Remove emojis
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 remove_action( 'wp_print_styles', 'print_emoji_styles' );
+
+// Custom Post Types
+function create_posttype() {
+  register_post_type( 'network',
+    array(
+      'labels' => array(
+        'name' => __( 'Network' ),
+        'singular_name' => __( 'Network Member' )
+      ),
+      'public' => true,
+      'has_archive' => false,
+      'supports' => array('title', 'editor', 'thumbnail'),
+      'rewrite' => array('slug' => 'network')
+    )
+  );
+}
+add_action( 'init', 'create_posttype' );
 
 // Widgets
 function web_widgets_init() {

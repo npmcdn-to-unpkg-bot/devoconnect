@@ -42,7 +42,7 @@ get_header(); ?>
      
     // The Loop
     if ( $the_query->have_posts() ) : ?>
-    <h3 class="text-accent text-center"><?php _e('Devolution Intelligence', 'DevoConnect');?></h3>
+    <h2 class="text-accent text-center"><?php _e('Devolution Intelligence', 'DevoConnect');?></h2>
     <br>
     <br>
     <div class="container">
@@ -54,7 +54,7 @@ get_header(); ?>
           <a href="<?php the_permalink(); ?>">
 			  <?php echo get_the_post_thumbnail( $post_id, 'medium', array( 'class' => 'card-img' ) );?>
 		  </a>
-          <h4><a href="<?php the_permalink(); ?>"><?php the_title();?></a></h4>
+          <h3><a href="<?php the_permalink(); ?>"><?php the_title();?></a></h3>
           <?php the_excerpt(); ?>
         </div>
       </div>
