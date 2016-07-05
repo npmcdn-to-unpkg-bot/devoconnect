@@ -1,3 +1,4 @@
+</div><!-- content -->
 <footer>
   <section class="container footer-bottom">
     <hr>

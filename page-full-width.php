@@ -13,7 +13,7 @@ get_header(); ?>
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
           <header class="page-header">
-            <h1><?php the_title(); ?></h1>
+            <h1><?php if(get_field('alternative_title')) { the_field('alternative_title'); } else { the_title(); } ?></h1>
           </header>
           <?php the_content(); ?>
 

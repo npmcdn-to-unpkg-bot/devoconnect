@@ -32,7 +32,7 @@
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                 </button>
-                <nav id="navbar" class="navbar-collapse collapse">
+                <nav id="navbar" class="navbar-collapse collapse" role="navigation">
                   <?php
                     $args = array(
                       'theme_location' => 'header',
@@ -51,3 +51,4 @@
         </div>
       </div>
     </header>
+	<div class="content" role="main">

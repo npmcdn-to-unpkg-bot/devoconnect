@@ -9,9 +9,8 @@ get_header(); if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
     <div class="container">
 
-      	<h1><?php the_field('jumbo_title'); ?></h1>
-        <br>
-
+      	<h1><?php if(get_field('alternative_title')) { the_field('alternative_title'); } else { the_title(); } ?></h1>
+       
         <?php the_content(); ?>
         <br>
           <?php if ( have_rows('services_bullets') ) : ?>
