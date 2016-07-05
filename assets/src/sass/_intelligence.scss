@@ -1,5 +1,33 @@
 .blog {
+	header {
+		hr {
+			margin-bottom:0;
+		}
+	}
 	form {
-		margin:0 auto;
+		margin:15px auto 10px auto;
+		text-align:center;
+		
+		label {
+			color:$mainAccent;
+		}
+	}
+	article {
+		float:none;
+		margin-bottom:25px;
+	
+		img.wp-post-image {
+			max-width:100%;
+			min-width:100%;
+			height:auto;
+		}
+		h2 {
+			font-size:26px;
+		}
+		.read-more {
+			color:$main;
+			font-weight:bold;
+			text-transform:uppercase;
+		}
 	}
 }

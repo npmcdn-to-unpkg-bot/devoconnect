@@ -1,7 +1,12 @@
 a.header-logo {
 	display: block;
 	text-align: center;
-	margin: 20px 0;
+	margin: 20px auto;
+	width:160px;
+	
+	img {
+		max-width:100%;
+	}
 }
 .navbar {
 	background-color: $main;
@@ -36,7 +41,7 @@ a.header-logo {
 					&:hover,
 					&:active {
 						color: $mainAccent;
-						transition: all 1s linear;
+						transition: all 0.25s linear;
 					}
 				}
 			}

@@ -1,3 +1,6 @@
+body {
+	font-size:16px;
+}
 // Useful helper classes
 .phone {
 	color: inherit;
@@ -22,6 +25,9 @@ h6 {
 	> a {
 		color: $main;
 	}
+}
+h1 {
+	margin-bottom:25px;
 }
 .row-high {
 	margin-top: $moreverticalrhythym;
