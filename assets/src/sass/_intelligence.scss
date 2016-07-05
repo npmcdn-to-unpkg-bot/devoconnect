@@ -1,15 +1,15 @@
+.signup-form {
+	margin:15px auto 10px auto;
+	text-align:center;
+	
+	label {
+		color:$mainAccent;
+	}
+}
 .blog {
 	header {
 		hr {
 			margin-bottom:0;
-		}
-	}
-	form {
-		margin:15px auto 10px auto;
-		text-align:center;
-		
-		label {
-			color:$mainAccent;
 		}
 	}
 	article {

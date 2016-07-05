@@ -42,7 +42,7 @@ get_header(); ?>
      
     // The Loop
     if ( $the_query->have_posts() ) : ?>
-    <h3 class="text-accent text-center"><?php _e('News', 'DevoConnect');?></h3>
+    <h3 class="text-accent text-center"><?php _e('Devolution Intelligence', 'DevoConnect');?></h3>
     <br>
     <br>
     <div class="container">
@@ -51,11 +51,11 @@ get_header(); ?>
         
       <div class="col-sm-4">
         <div class="card">
-          <?php echo get_the_post_thumbnail( $post_id, 'medium', array( 'class' => 'card-img' ) );?>
-          <br>
-          <h4><?php the_title();?></h4>
+          <a href="<?php the_permalink(); ?>">
+			  <?php echo get_the_post_thumbnail( $post_id, 'medium', array( 'class' => 'card-img' ) );?>
+		  </a>
+          <h4><a href="<?php the_permalink(); ?>"><?php the_title();?></a></h4>
           <?php the_excerpt(); ?>
-          <h5 class="text-uppercase"><a href="<?php the_permalink();?>"><?php _e('Read more', 'DevoConnect');?></a></h5>
         </div>
       </div>
 
@@ -72,7 +72,7 @@ get_header(); ?>
         height="122"
         class="logo-gmc-fixed"
         id="fixed-top"
-      >
+      />
       <img
         src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo-gmccomms-white.png"
         alt="<?php bloginfo('description'); ?>"
@@ -80,11 +80,14 @@ get_header(); ?>
         height="122"
         class="logo-gmc-fixed"
         id="fixed-bottom"
-      >
+      />
     </div>
   </section>
   <br>
+  <div class="container">
+	  <hr/>
+  	<?php include('partials/signup.php');?>
+  </div>
 <?php endwhile; endif; ?>
 
 <?php get_footer(); ?>
-
