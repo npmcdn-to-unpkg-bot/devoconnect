@@ -3,13 +3,12 @@ body {
 }
 // Useful helper classes
 .phone {
-	color: inherit;
 	text-decoration: none;
 	cursor:default;
 
 	&:hover,
 	&:active {
-		color: inherit;
+		color: $main;
 		text-decoration: none;
 	}
 }
@@ -33,6 +32,7 @@ h1 {
 }
 .content {
 	margin-top:25px;
+	padding-bottom:60px;
 }
 .page-header {
 	margin-top:0;

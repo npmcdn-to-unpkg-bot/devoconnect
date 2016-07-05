@@ -8,7 +8,7 @@ $moreverticalrhythym: $verticalrhythym * 2;
 // Colours
 $main: #009DA9; $brand-primary: $main;
 $mainAccent: #0065B1;
-$link-color: black;
+$link-color: $main;
 $link-hover-color: $mainAccent;
 
 $devoPurple: #4B175F;
@@ -34,3 +34,4 @@ $devoGreen: #006327;
 @import 'frontpage';
 @import 'pageservices';
 @import 'intelligence';
+@import 'contact';

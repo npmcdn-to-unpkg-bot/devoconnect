@@ -11,6 +11,7 @@ a.header-logo {
 .navbar {
 	background-color: $main;
 	margin-bottom: 0;
+	border:0;
 
 	.navbar-header {
 
@@ -35,13 +36,12 @@ a.header-logo {
 			> li {
 
 				a {
-					transition: all 1s linear;
+					transition: all 0.25s linear;
 					color: white;
 
 					&:hover,
 					&:active {
 						color: $mainAccent;
-						transition: all 0.25s linear;
 					}
 				}
 			}
@@ -57,16 +57,6 @@ a.header-logo {
 				display: flex;
 				justify-content: center;
 
-				> li {
-
-					a {
-
-						&:hover,
-						&:active {
-
-						}
-					}
-				}
 			}	
 		}
 	}
