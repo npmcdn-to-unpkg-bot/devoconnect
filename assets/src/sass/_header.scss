@@ -1,3 +1,73 @@
+.header {
+	position:relative;
+	
+	.gmc-link {
+		display:block;
+		position:absolute;
+		top:0px;
+		right:0px;
+		width:60px;
+		height:60px;
+		padding:5px 5px 5px 10px;
+		background:$main;
+		-webkit-border-bottom-left-radius: 32px;
+		-moz-border-radius-bottomleft: 32px;
+		border-bottom-left-radius: 32px;
+		
+		img {
+			max-width:100%;
+		}
+		.gmc-tooltip {
+			position:absolute;
+			right:17px;
+			top:72px;
+			background:$mainAccent;
+			padding:10px 20px;
+			width:250px;
+			border-radius:21px;
+			border:6px solid #77C6CC;
+			opacity:0;
+			visibility:hidden;
+			
+			&:after 
+			{
+			content: '';
+			position: absolute;
+			border-style: solid;
+			border-width: 0 12px 19px;
+			border-color: $mainAccent transparent;
+			display: block;
+			width: 0;
+			z-index: 1;
+			top: -19px;
+			left: 197px;
+			}
+
+			&:before 
+			{
+			content: '';
+			position: absolute;
+			border-style: solid;
+			border-width: 0 17px 24px;
+			border-color: #77C6CC transparent;
+			display: block;
+			width: 0;
+			z-index: 0;
+			top: -30px;
+			left: 192px;
+			}
+		}
+		&:hover {
+			opacity:1;
+			background:$mainAccent;
+			
+			.gmc-tooltip {
+				opacity:1;
+				visibility:visible;
+			}
+		}
+	}
+}
 a.header-logo {
 	display: block;
 	text-align: center;

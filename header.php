@@ -4,13 +4,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?php bloginfo('name'); ?> | <?php bloginfo('description'); ?></title>
-    <?php include('partials/favicons.php');?>
+    <title><?php wp_title(); ?></title>
     <?php wp_head(); ?>
+	<?php include('partials/favicons.php');?>
   </head>
 
   <body <?php body_class(); ?>>
-    <header>
+    <header class="header">
       <div class="container">
           <a class="header-logo" href="<?php bloginfo('url'); ?>">
             <img
@@ -18,11 +18,11 @@
               alt="<?php bloginfo('description'); ?>"
               width="210"
               height="auto"
-            >
+            />
           </a>
       </div>
       <div class="navbar-wrapper">
-          <nav class="navbar navbar-static-top">
+          <nav class="navbar">
             <div class="container">
               <div class="navbar-header">
                 <h4 class="visible-xs-block text-center"><?php _e('Toggle Navigation', 'DevoConnect'); ?></h4>
@@ -47,8 +47,13 @@
               </div>
             </div>
           </nav>
-
         </div>
       </div>
+	  <a href="<?php bloginfo('url'); ?>/gmc/" class="gmc-link">
+      	<img src="<?php bloginfo('template_directory'); ?>/assets/img/logo-gmc-white.png" alt="Gill Morris Communication" class="gmc-img" />
+		<div class="gmc-tooltip transition-quarter">
+			<img src="<?php bloginfo('template_directory'); ?>/assets/img/logo-gmccomms-white.png" alt="Gill Morris Communication" />
+		</div>
+	  </a>
     </header>
 	<div class="content" role="main">

@@ -63,26 +63,7 @@ get_header(); ?>
     </div>
   </div>
   <?php endif; wp_reset_postdata(); ?>
-  <section class="container footer-top">
-    <div class="flex flex-center flex-row">
-      <img
-        src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo-gmc-white.png"
-        alt="<?php bloginfo('description'); ?>"
-        width="122"
-        height="122"
-        class="logo-gmc-fixed"
-        id="fixed-top"
-      />
-      <img
-        src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo-gmccomms-white.png"
-        alt="<?php bloginfo('description'); ?>"
-        width="255"
-        height="122"
-        class="logo-gmc-fixed"
-        id="fixed-bottom"
-      />
-    </div>
-  </section>
+ 
   <br>
   <div class="container">
 	  <hr/>
