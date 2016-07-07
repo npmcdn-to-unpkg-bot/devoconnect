@@ -5,11 +5,38 @@
 .jumbotron {
 	background-color: transparent;
 	text-align: center;
-
+	padding-top:0;
+	padding-bottom:0;
+	
+	h1, h2, h3 {
+		color: $mainAccent;
+	}
 	h1 {
 		font-size: 42px;
 	    font-weight: bold;
-	    color: $mainAccent;
+	}
+	h2 {
+		margin-bottom:25px;
+	}
+	h3 {
+		margin-top:20px;
+		margin-bottom:20px;
+	}
+	p {
+		font-size:18px;
+	}
+	li {
+		font-size:18px;
+	}
+	.devolution-map {
+		text-align:left;
+		
+		li {
+			margin-bottom:0.5em;
+		}
+	}
+	hr {
+		margin-top:40px;
 	}
 }
 .services-blob {
@@ -24,15 +51,23 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-
-	&:nth-child(1) {
-		background-color: $devoPurple;
-	}
-	&:nth-child(2) {
-		background-color: $mainAccent;
-	}
-	&:nth-child(3) {
-		background-color: $devoGreen;
+}
+.services-blobs {
+	a {
+		@include hoverFadeMouseOff;
+		
+		&:hover {
+			@include hoverFadeMouseOn;
+		}	
+		&:nth-child(1) .services-blob {
+			background-color: $devoPurple;
+		}
+		&:nth-child(2) .services-blob {
+			background-color: $mainAccent;
+		}
+		&:nth-child(3) .services-blob {
+			background-color: $devoGreen;
+		}
 	}
 }
 .logo-gmc-fixed {

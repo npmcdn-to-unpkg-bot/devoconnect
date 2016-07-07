@@ -73,7 +73,12 @@ a.header-logo {
 	text-align: center;
 	margin: 20px auto 25px auto;
 	width:160px;
+	@include hoverFadeMouseOff;
 	
+	  &:hover {
+		@include hoverFadeMouseOn;
+	  }
+	  
 	img {
 		max-width:100%;
 	}

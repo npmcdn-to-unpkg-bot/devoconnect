@@ -6,32 +6,44 @@
  * @subpackage DevoConnect
  */
 get_header(); ?>
-  <?php 
-    if(has_post_thumbnail()) {
-      echo get_the_post_thumbnail( $post_id, 'large', array( 'class' => 'banner-img' ) );
-    }
-  ?>
+ 
+<div class="container"> 
   <div class="jumbotron">
-    <div class="container">
+    
       <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-      	<h1><?php the_field('jumbo_title'); ?></h1>
-        <br>
+      	<h1><?php if(get_field('alternative_title')) { the_field('alternative_title'); } else { the_title(); } ?></h1>
 
         <?php the_content(); ?>
-        <br>
-
-        <?php if(have_rows('services_blob')) :?>
-          <div class="row flex flex-center flex-row">
-          <?php while(have_rows('services_blob')) : the_row(); ?>
-            <div class="services-blob">
-              <?php the_sub_field('services_text'); ?>
-            </div>  
-		      <?php endwhile; ?>
-        </div>
-    </div>
-  </div>
-  <?php endif; ?>
+   
+		<hr/>
+		
+		<?php echo do_shortcode('[interactive_map id="5"]' ); ?>
+  
+   
+		<hr/>
+			
+		<div class="row">
+			<div class="col-sm-12">
+				<h2>Devolution Services</h2>
+			</div>
+		</div>
+			
+		  <?php if(have_rows('services_blob')) :?>
+				<div class="row flex flex-center flex-row services-blobs">
+				  <?php while(have_rows('services_blob')) : the_row(); ?>
+					<a href="<?php the_sub_field('services_link'); ?>">
+						<div class="services-blob">
+							<?php the_sub_field('services_text'); ?>
+						</div>
+					</a>
+				  <?php endwhile; ?>
+				</div>
+		  
+		  <?php endif; ?>
+		
+	 </div><!-- jumbotron -->	
+		
   <?php 
     $args = array(
         'post_type' => 'post',
@@ -45,7 +57,7 @@ get_header(); ?>
     <h2 class="text-accent text-center"><?php _e('Devolution Intelligence', 'DevoConnect');?></h2>
     <br>
     <br>
-    <div class="container">
+
     <div class="row">
       <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
         
@@ -61,14 +73,12 @@ get_header(); ?>
 
     <?php endwhile; ?>
     </div>
-  </div>
   <?php endif; wp_reset_postdata(); ?>
  
-  <br>
-  <div class="container">
+		<br/>
 	  <hr/>
   	<?php include('partials/signup.php');?>
-  </div>
+</div><!-- container -->
 <?php endwhile; endif; ?>
 
 <?php get_footer(); ?>

@@ -33,8 +33,15 @@ h1 {
 	color:$mainAccent;
 	text-align:center;
 }
+strong {
+	color:$main;
+}
 .content {
 	padding-bottom:60px;
+	
+	a {
+		font-weight:bold;
+	}
 }
 .page-header {
 	margin-top:0;
