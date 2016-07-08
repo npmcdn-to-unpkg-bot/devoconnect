@@ -8,8 +8,9 @@
 get_header(); if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
     <div class="container">
-
-      	<h1><?php if(get_field('alternative_title')) { the_field('alternative_title'); } else { the_title(); } ?></h1>
+		<div class="text-center">
+			<h1><?php if(get_field('alternative_title')) { the_field('alternative_title'); } else { the_title(); } ?></h1>
+		</div>
        	<div class="row">
 			<div class="col-sm-2 contact-areas">
 				<p>London</p>

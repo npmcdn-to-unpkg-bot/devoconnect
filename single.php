@@ -18,10 +18,17 @@ get_header(); ?>
 				}
 			?>
 		
-          <header class="page-header">
+         
             <h1><?php the_title(); ?></h1>
-          </header>
+         
           <?php the_content(); ?>
+		  
+		  <?php if(get_field('article_link')) { ?>
+			<br/>
+			<a href="<?php the_field('article_link'); ?>" class="btn btn-primary">Read More</a>
+		  <?php } ?>
+		  
+		  <br/><br/>
 		  <?php echo do_shortcode('[ssba]'); ?>
 
         <?php endwhile; endif; ?>
