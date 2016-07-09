@@ -20,16 +20,17 @@ get_header(); ?>
 		
          
             <h1><?php the_title(); ?></h1>
-         
-          <?php the_content(); ?>
+			 <p class="text-accent"><?php the_time('F j, Y'); ?></p>
+			 <br/>
+         	 <?php the_content(); ?>
 		  
-		  <?php if(get_field('article_link')) { ?>
-			<br/>
-			<a href="<?php the_field('article_link'); ?>" class="btn btn-primary">Read More</a>
-		  <?php } ?>
+			  <?php if(get_field('article_link')) { ?>
+				<br/>
+				<a href="<?php the_field('article_link'); ?>" class="btn btn-primary">Read More</a>
+			  <?php } ?>
 		  
-		  <br/><br/>
-		  <?php echo do_shortcode('[ssba]'); ?>
+			  <br/><br/>
+			  <?php echo do_shortcode('[ssba]'); ?>
 
         <?php endwhile; endif; ?>
     </div>
