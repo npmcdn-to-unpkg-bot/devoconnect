@@ -36,6 +36,9 @@ get_header(); if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 						<?php if(get_field('caption')) { ?>
 							<p><?php the_field('caption'); ?></p>
 						<?php } ?>
+						<div class="network-member-info transition-quarter">
+							<?php the_content(); ?>
+						</div>
 					</div>
 					<?php if($networkcount % 3 == 0) { echo '</div><div class="row">'; } ?>		
 				  <?php endwhile; ?>
