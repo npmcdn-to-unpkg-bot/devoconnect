@@ -10,8 +10,10 @@ get_header(); if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <div class="container">
    
 		<h1 class="text-center text-accent"><?php the_title(); ?></h1>
-		<div class="text-center"
-			<?php the_content(); ?>
+		<div class="row">
+			<div class="col-sm-12 col-md-10 col-md-offset-1 text-center">
+				<?php the_content(); ?>
+			</div>
 		</div>
    	
 	    <?php 

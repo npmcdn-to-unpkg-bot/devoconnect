@@ -91,12 +91,13 @@ function register_theme_menus() {
 add_action('init', 'register_theme_menus');
 
 // Turns on featured image option in custom post types
-function blaze_theme_images() {
+function ech_theme_images() {
   add_theme_support( 'post-thumbnails' );
   // Custom image sizes
-  // add_image_size( 'testimonialimage', 56, 56, true );
+  add_image_size( 'featuredimage', 555, 250, true );
+  add_image_size( 'homenews', 360, 200, true );
 }
-add_action( 'after_setup_theme', 'blaze_theme_images' );
+add_action( 'after_setup_theme', 'ech_theme_images' );
 
 // Better excerpt links
 function new_excerpt_more( $more ) {

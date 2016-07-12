@@ -2,7 +2,9 @@
 	$('.articles').imagesLoaded( function() {
 		$('.articles').masonry({
 			// options
-			itemSelector: 'article'
+			itemSelector: 'article',
+			columnWidth: '.col-sm-3',
+			percentPosition: true
 		});
 	});
 })(jQuery);

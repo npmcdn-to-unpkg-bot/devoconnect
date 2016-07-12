@@ -8,10 +8,11 @@
 get_header(); if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
     <div class="container">
-		
-		<div class="text-center">
-			<h1><?php if(get_field('alternative_title')) { the_field('alternative_title'); } else { the_title(); } ?></h1>
-    		<?php the_content(); ?>
+		<div class="row">
+			<div class="col-sm-12 col-md-10 col-md-offset-1 text-center">
+				<h1><?php if(get_field('alternative_title')) { the_field('alternative_title'); } else { the_title(); } ?></h1>
+	    		<?php the_content(); ?>
+			</div>
 		</div>
         <br>
           <?php if ( have_rows('services_bullets') ) : ?>

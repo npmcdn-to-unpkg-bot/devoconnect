@@ -21,7 +21,7 @@ get_header(); ?>
 					<article class="post-excerpt <?php if(get_field('featured')) { echo 'col-sm-6'; } else { echo 'col-sm-3'; } ?>">
 						<?php if ( has_post_thumbnail() ) { ?>
 							<a href="<?php the_permalink() ;?>">
-								<?php the_post_thumbnail('medium'); ?>
+								<?php if(get_field('featured')) { the_post_thumbnail('featuredimage'); } else { the_post_thumbnail('medium'); } ?>
 							</a>
 						<?php }	?>
 						<h2><a href="<?php the_permalink() ;?>"><?php the_title(); ?></a></h2>

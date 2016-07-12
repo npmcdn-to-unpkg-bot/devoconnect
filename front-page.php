@@ -47,7 +47,9 @@ get_header(); ?>
   <?php 
     $args = array(
         'post_type' => 'post',
-		'posts_per_page' => 3	
+		'posts_per_page' => 3,
+		'meta_key'		=> 'featured',
+		'meta_value'	=> true,
       );
     // The Query
     $the_query = new WP_Query( $args );
@@ -63,7 +65,7 @@ get_header(); ?>
         <div class="card">
 			<?php if ( has_post_thumbnail() ) { ?>	
 				<a href="<?php the_permalink(); ?>">
-			  	  <?php echo get_the_post_thumbnail( $post_id, 'medium', array( 'class' => 'card-img' ) );?>
+			  	  <?php echo get_the_post_thumbnail( $post_id, 'homenews', array( 'class' => 'card-img' ) );?>
 		  		</a>
 			<?php } ?>
           <h3><a href="<?php the_permalink(); ?>"><?php the_title();?></a></h3>
