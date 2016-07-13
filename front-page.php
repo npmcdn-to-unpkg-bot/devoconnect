@@ -69,7 +69,7 @@ get_header(); ?>
 		  		</a>
 			<?php } ?>
           <h3><a href="<?php the_permalink(); ?>"><?php the_title();?></a></h3>
-		  <p class="text-accent"><small><?php the_time('F j, Y'); ?></small></p>
+		  <p class="text-accent"><small>by <strong><?php the_author(); ?></strong> on <?php the_time('F j, Y'); ?></small></p>
           <?php the_excerpt(); ?>
         </div>
       </div>

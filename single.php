@@ -20,8 +20,19 @@ get_header(); ?>
 		
          
             <h1><?php the_title(); ?></h1>
-			 <p class="text-accent"><?php the_time('F j, Y'); ?></p>
-			 <br/>
+			 <div class="post-details text-accent clearfix">
+				<?php
+				  $author_id = get_the_author_meta( 'ID' );
+				  $author_badge = get_field('profile_picture', 'user_'. $author_id );
+				  $size = 'thumbnail';
+				  $image = wp_get_attachment_image_src( $author_badge, $size );
+				?>
+				<?php if ($author_badge) { ?>
+					<img src="<?php echo $image[0]; ?>" alt="<?php the_author(); ?>" class="profilepic img-circle" />
+				<?php } ?>
+				<p><small>by <strong><?php the_author(); ?></strong> on <?php the_time('F j, Y'); ?></small>, posted in <?php the_category( ', ' ); ?> categories</p>
+			</div>
+			 
          	 <?php the_content(); ?>
 		  
 			  <?php if(get_field('article_link')) { ?>

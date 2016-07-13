@@ -13,6 +13,7 @@ get_header(); if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		</div>
        	<div class="row">
 			<div class="col-sm-2 contact-areas">
+				<p><strong>Operating in:</strong></p>
 				<p>London</p>
 				<p>Manchester</p>
 				<p>Birmingham</p>

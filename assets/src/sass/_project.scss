@@ -35,6 +35,12 @@ h1 {
 strong {
 	color:$main;
 }
+small {
+
+	strong {
+		color:$mainAccent;
+	}
+}
 .content {
 	padding-bottom:60px;
 	

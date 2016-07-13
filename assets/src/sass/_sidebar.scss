@@ -7,4 +7,12 @@
 	li {
 		margin-top:0.5em;
 	}
+	a {
+		color:$mainAccent;
+		font-weight:normal;
+	}
+	@media (min-width: 992px){
+		padding-left:30px;
+	}
+	
 }

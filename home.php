@@ -25,7 +25,7 @@ get_header(); ?>
 							</a>
 						<?php }	?>
 						<h2><a href="<?php the_permalink() ;?>"><?php the_title(); ?></a></h2>
-						<p class="text-accent"><small><?php the_time('F j, Y'); ?></small></p>
+						<p class="text-accent"><small>by <strong><?php the_author(); ?></strong> on <?php the_time('F j, Y'); ?></small></p>
 						<?php the_excerpt(); ?>
 						<?php // echo do_shortcode('[ssba]'); ?>
 					</article>
