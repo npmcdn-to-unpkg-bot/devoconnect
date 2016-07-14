@@ -12,7 +12,19 @@ get_header(); ?>
       <div class="col-sm-8">
 
         <header class="page-header">
-          <h1><?php wp_title(''); ?></h1>
+          <h1>
+			<?php if ( is_day() ) : ?>
+				<?php printf( __( 'Daily Archives: %s', 'summit' ), '<span>' . get_the_date() . '</span>' ); ?>
+			<?php elseif ( is_month() ) : ?>
+				<?php printf( __( 'Monthly Archives: %s', 'summit' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'summit' ) ) . '</span>' ); ?>
+			<?php elseif ( is_year() ) : ?>
+				<?php printf( __( 'Yearly Archives: %s', 'summit' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'summit' ) ) . '</span>' ); ?>
+			<?php elseif ( is_author() ) : ?>
+				Articles by <span><?php the_author(); ?></span>
+			<?php else : ?>
+				<?php single_cat_title(); ?>
+			<?php endif; ?>
+          </h1>
         </header>
         
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
