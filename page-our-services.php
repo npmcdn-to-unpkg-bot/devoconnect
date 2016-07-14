@@ -1,5 +1,6 @@
 <?php
-/**
+/*
+Template Name: Services
  * Description: Services Page template
  *
  * @package    WordPress

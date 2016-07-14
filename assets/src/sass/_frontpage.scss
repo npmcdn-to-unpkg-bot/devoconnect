@@ -12,7 +12,7 @@
 		color: $mainAccent;
 	}
 	h1 {
-		font-size: 42px;
+		font-size: 38px;
 	    font-weight: bold;
 	}
 	h2 {
@@ -92,5 +92,10 @@
 			}
 
 		}
+	}
+}
+@media (min-width: 1200px){
+	h1 {
+		font-size: 42px;
 	}
 }

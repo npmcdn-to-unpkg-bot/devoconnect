@@ -56,7 +56,11 @@ get_header(); ?>
      
     // The Loop
     if ( $the_query->have_posts() ) : ?>
-    <h2 class="text-accent text-center">Devolution <a href="<?php bloginfo('url'); ?>/news/">Intelligence</a></h2>
+    <h2 class="text-accent text-center">Devolution <a href="<?php bloginfo('url'); ?>/news/">News &amp; Views</a></h2>
+	
+	<a href="<?php bloginfo('url'); ?>/news/">
+		<img src="<?php bloginfo('template_directory'); ?>/assets/img/devo-intelligence.jpg" alt="Devo Intelligence" class="devo-intelligence" />
+	</a>
 	
     <div class="row">
       <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>

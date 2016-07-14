@@ -12,6 +12,11 @@ get_header(); ?>
         <header class="page-header">
 			<h1 class="text-center text-accent"><?php _e('Devolution Intelligence', 'DevoConnect'); ?></h1>
 			<p class="text-center"><?php _e('The latest news and views from DevoIntelligence.', 'DevoConnect'); ?></p>
+			
+			<a href="<?php bloginfo('url'); ?>/news/">
+				<img src="<?php bloginfo('template_directory'); ?>/assets/img/devo-intelligence.jpg" alt="Devo Intelligence" class="devo-intelligence" />
+			</a>
+			
 			<hr/>
 			<?php include('partials/signup.php');?>
         </header>

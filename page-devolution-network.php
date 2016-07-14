@@ -1,5 +1,6 @@
 <?php
-/**
+/*
+Template Name: Network
  * Description: Network Page template
  *
  * @package    WordPress

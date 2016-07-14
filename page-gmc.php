@@ -1,5 +1,5 @@
 <?php
-/**
+/*
 Template Name: GMC
  * Description: Front Page template
  *

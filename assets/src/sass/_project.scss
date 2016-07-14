@@ -76,6 +76,11 @@ small {
 .text-uppercase {
 	text-transform: uppercase;
 }
+.call-to-action .btn {
+	margin-top:20px;
+}
+::-moz-selection{background: $main; color: #ffffff; text-shadow: none;}
+::selection {background: $main; color: #ffffff; text-shadow: none;}
 
 @media (min-width: 768px){
 	.flex {

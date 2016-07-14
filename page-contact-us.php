@@ -1,5 +1,6 @@
 <?php
-/**
+/*
+Template Name: Contact
  * Description: Contact Page template
  *
  * @package    WordPress
