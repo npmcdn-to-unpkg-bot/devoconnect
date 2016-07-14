@@ -65,9 +65,9 @@
       </div>
 	   <?php if (is_page_template( 'page-gmc.php' )) { ?>
 		  <a href="<?php bloginfo('url'); ?>/" class="gmc-link">
-			<img src="<?php bloginfo('template_directory'); ?>/assets/img/logo-header.png" alt="DevoConnect" class="gmc-img" />
+			<img src="<?php bloginfo('template_directory'); ?>/assets/img/logo-white.png" alt="DevoConnect" class="gmc-img" />
 			<div class="gmc-tooltip transition-quarter">
-				<img src="<?php bloginfo('template_directory'); ?>/assets/img/logo-header.png" alt="DevoConnect" />
+				<img src="<?php bloginfo('template_directory'); ?>/assets/img/logo-white.png" alt="DevoConnect" />
 			</div>
 		  </a>
 	   <?php } else { ?>
