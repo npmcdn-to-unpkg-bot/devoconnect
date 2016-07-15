@@ -7,21 +7,41 @@
  */
 get_header(); ?>
  
-<div class="container"> 
-  <div class="jumbotron">
+
     
-      <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-
-      	<h1><?php if(get_field('alternative_title')) { the_field('alternative_title'); } else { the_title(); } ?></h1>
-
-        <?php the_content(); ?>
+    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+		
+		<div class="devo-intro">
+			<div class="carousel">
+				<div class="slide" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/carousel/speed.jpg)"></div>
+				<div class="slide" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/carousel/river.jpg)"></div>
+				<div class="slide" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/carousel/sunset.jpg)"></div>
+			</div>
+			<div class="caption">
+				<div class="container">
+					<h1><?php if(get_field('alternative_title')) { the_field('alternative_title'); } else { the_title(); } ?></h1>	
+				</div>
+			</div>
+		</div>
+		  
+	<div class="container"> 
+	  <div class="jumbotron">
+		
+		<div class="row">
+			<div class="col-sm-12 col-lg-10 col-lg-offset-1">
+				<?php the_content(); ?>
+			</div>
+		</div>
    
+		
+		<?php /* 
 		<hr/>
 		
-		<?php echo do_shortcode('[interactive_map id="5"]' ); ?>
+		 echo do_shortcode('[interactive_map id="5"]' );
   
    
-		<hr/>
+		<hr/> 
+		*/ ?>
 			
 		<div class="row">
 			<div class="col-sm-12">
@@ -68,7 +88,7 @@ get_header(); ?>
       <div class="col-sm-4">
         <div class="card">
 			<?php if ( has_post_thumbnail() ) { ?>	
-				<a href="<?php the_permalink(); ?>">
+				<a href="<?php the_permalink(); ?>" class="card-img-link">
 			  	  <?php echo get_the_post_thumbnail( $post_id, 'homenews', array( 'class' => 'card-img' ) );?>
 		  		</a>
 			<?php } ?>
@@ -89,7 +109,8 @@ get_header(); ?>
 		<br/>
 	  <hr/>
   	<?php include('partials/signup.php');?>
+<?php endwhile; endif; ?>	
 </div><!-- container -->
-<?php endwhile; endif; ?>
+
 
 <?php get_footer(); ?>
