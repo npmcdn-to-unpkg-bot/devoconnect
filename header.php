@@ -15,11 +15,10 @@
           <?php if (is_page_template( 'page-gmc.php' )) { ?>
 			<a class="header-logo" href="<?php bloginfo('url'); ?>/gmc/">
 				<img
-				  src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo-gmccomms-white.png"
+				  src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/logo-gmc.jpg"
 				  alt="<?php bloginfo('description'); ?>"
 				  width="210"
 				  height="auto"
-				  style="background:#0065B1; padding:10px;"
 				/>
 			  </a>	
 		  <?php } else { ?>

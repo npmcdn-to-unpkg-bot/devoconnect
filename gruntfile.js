@@ -40,6 +40,7 @@ module.exports = function(grunt) {
         'assets/js/project-footerscripts.js': ['assets/src/js/footer/*.js'],
 		'assets/js/project-homescripts.js': ['assets/src/js/home/*.js'],
 		'assets/js/project-intelligencescripts.js': ['assets/src/js/intelligence/*.js'],
+		  'assets/js/project-gmcscripts.js': ['assets/src/js/gmc/*.js'],
       },
     },
   },
@@ -50,6 +51,7 @@ module.exports = function(grunt) {
         'assets/js/project-footerscripts.min.js': ['assets/js/project-footerscripts.js'],
 		'assets/js/project-homescripts.min.js': ['assets/js/project-homescripts.js'],
 		'assets/js/project-intelligencescripts.min.js': ['assets/js/project-intelligencescripts.js'],
+		'assets/js/project-gmcscripts.min.js': ['assets/js/project-gmcscripts.js'],
       }
     }
   },

@@ -81,6 +81,12 @@ a.header-logo {
 	  
 	img {
 		max-width:100%;
+		min-width:100%;
+	}
+}
+.page-template-page-gmc {
+	a.header-logo {
+		width:250px;
 	}
 }
 .navbar {
@@ -142,6 +148,6 @@ a.header-logo {
 		}
 	}
 }
-.page-template-page-gmc .navbar {
+/* .page-template-page-gmc .navbar {
 	background:$mainAccent;
-}
+} */

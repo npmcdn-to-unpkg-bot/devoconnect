@@ -80,6 +80,11 @@ small {
 .call-to-action .btn {
 	margin-top:20px;
 }
+.alignleft, .aligncenter, .alignright {
+	display:block;
+	margin-top:10px;
+	margin-bottom:10px;
+}
 ::-moz-selection{background: $main; color: #ffffff; text-shadow: none;}
 ::selection {background: $main; color: #ffffff; text-shadow: none;}
 
@@ -90,6 +95,18 @@ small {
 	.flex {
 		// has to go in a mq otherwise creates overflow issues on small viewports
 		display: flex;
+	}
+	.alignleft {
+		float:left;
+		margin-right:15px;
+	}
+	.alignright {
+		float:right;
+		margin-left:15px;
+	}
+	.aligncenter {
+		margin-left:auto;
+		margin-right:auto;
 	}
 }
 @media (min-width: 992px){

@@ -45,6 +45,12 @@ function theme_js() {
 	wp_enqueue_script('theme_intelligence_js', get_template_directory_uri() . '/assets/js/project-intelligencescripts.min.js', array('jquery'), '', true);
   }
   
+  if (is_page('gmc')) {
+	wp_enqueue_script('imagesloaded_js', 'https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js', array('jquery'), null, true); 
+	wp_enqueue_script('masonry_js', 'https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js', array('jquery'), null, true);
+		wp_enqueue_script('theme_carousel_js', get_template_directory_uri() . '/assets/js/project-homescripts.min.js', array('jquery'), '', true);  
+	wp_enqueue_script('theme_gmc_js', get_template_directory_uri() . '/assets/js/project-gmcscripts.min.js', array('jquery'), '', true);
+  }
   
 }
 add_action('wp_enqueue_scripts', 'theme_js');

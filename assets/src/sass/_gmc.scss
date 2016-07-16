@@ -1,0 +1,42 @@
+.page-template-page-gmc {
+	h2 {
+		margin-bottom:20px;
+	}
+	.services-blobs {
+		margin-top:30px;
+		margin-bottom:30px;
+		
+		div {
+			@include hoverFadeMouseOff;
+		
+			&:hover {
+				@include hoverFadeMouseOn;
+			}	
+			&:nth-child(1) {
+				background-color: $devoPurple;
+			}
+			&:nth-child(2) {
+				background-color: $main;
+			}
+			&:nth-child(3) {
+				background-color: $devoGreen;
+			}
+		}
+	}
+	.btn {
+		margin-top:30px;
+		margin-bottom:40px;
+	}
+	.gallery {
+		margin-top:50px;
+		
+		.gallery-item {
+			margin-bottom:25px;
+			
+			img {
+				max-width:100%;
+				min-width:100%;
+			}
+		}
+	}
+}
