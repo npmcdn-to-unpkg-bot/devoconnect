@@ -32,7 +32,7 @@ get_header(); if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
           </div>
         <?php endif; ?>
 		<?php if(get_field('call_to_action')) { ?>
-			<br/>
+			<br/><br/>
 			<div class="row call-to-action">
 				<div class="col-sm-12 text-center">
 					<?php the_field('call_to_action'); ?>

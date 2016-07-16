@@ -1,5 +1,26 @@
 footer {
+	text-align:center;
+	
 	p.btn {
 		padding-left:0;
+		margin-bottom:30px;
+	}
+	li {
+		font-size:14px;
+	}
+}
+@media (min-width: 768px){
+	p.btn {
+		margin-bottom:0;
+	}
+	footer .nav {
+		float:right;
+	}
+}
+@media (min-width: 992px){
+	footer {
+		li {
+			font-size:16px;
+		}
 	}
 }

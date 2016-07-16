@@ -13,9 +13,7 @@ get_header(); ?>
 			<h1 class="text-center text-accent"><?php _e('Devolution Intelligence', 'DevoConnect'); ?></h1>
 			<p class="text-center"><?php _e('The latest news and views from DevoIntelligence.', 'DevoConnect'); ?></p>
 			
-			<a href="<?php bloginfo('url'); ?>/news/">
-				<img src="<?php bloginfo('template_directory'); ?>/assets/img/devo-intelligence.jpg" alt="Devo Intelligence" class="devo-intelligence" />
-			</a>
+			<img src="<?php bloginfo('template_directory'); ?>/assets/img/devo-intelligence.jpg" alt="Devo Intelligence" class="devo-intelligence" />
 			
 			<hr/>
 			<?php include('partials/signup.php');?>
@@ -25,7 +23,7 @@ get_header(); ?>
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 					<article class="post-excerpt <?php if(get_field('featured')) { echo 'col-sm-6'; } else { echo 'col-sm-3'; } ?>">
 						<?php if ( has_post_thumbnail() ) { ?>
-							<a href="<?php the_permalink() ;?>">
+							<a href="<?php the_permalink() ;?>" class="article-img-link">
 								<?php if(get_field('featured')) { the_post_thumbnail('featuredimage'); } else { the_post_thumbnail('medium'); } ?>
 							</a>
 						<?php }	?>
@@ -33,6 +31,7 @@ get_header(); ?>
 						<p class="text-accent"><small>by <strong><?php the_author(); ?></strong> on <?php the_time('F j, Y'); ?></small></p>
 						<?php the_excerpt(); ?>
 						<?php // echo do_shortcode('[ssba]'); ?>
+						<hr/>
 					</article>
 				<?php endwhile; endif; ?>
 			</div>

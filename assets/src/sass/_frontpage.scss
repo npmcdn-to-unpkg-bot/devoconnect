@@ -1,6 +1,8 @@
 .devo-intro {
 	position:relative;
 	margin-bottom:40px;
+	overflow:hidden;
+	height:350px;
 	
 	.slide {
 		height:350px;
@@ -37,10 +39,6 @@
 	
 	h1, h2, h3 {
 		color: $mainAccent;
-	}
-	h1 {
-		font-size: 38px;
-	    font-weight: bold;
 	}
 	h2 {
 		margin-bottom:25px;
@@ -107,6 +105,8 @@
 }
 @media (min-width: 768px){
 	.devo-intro {
+		height:250px;
+		
 		.slide {
 			height:250px;
 		}
@@ -114,6 +114,8 @@
 }
 @media (min-width: 992px){
 	.devo-intro {
+		height:300px;
+		
 		.slide {
 			height:300px;
 		}
@@ -124,6 +126,8 @@
 		font-size: 42px;
 	}
 	.devo-intro {
+		height:350px;
+		
 		.slide {
 			height:350px;
 		}

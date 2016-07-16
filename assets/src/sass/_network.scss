@@ -17,11 +17,10 @@
 		visibility:hidden;
 		background:$mainAccent;
 		padding:15px;
-		position:absolute;
-		top:258px;
-		left:0;
+		position:relative;
 		color:#fff;
 		z-index:2;
+		height:0;
 		
 		&:after 
 		{
@@ -35,11 +34,23 @@
 		z-index: 1;
 		top: -15px;
 		left: 50%;
-		margin-left:-8px;
+		margin-left:-16px;
 		}
 	}
 	&:hover .network-member-info {
 		opacity:1;
 		visibility:visible;
+		height:auto;
+	}
+}
+
+@media (min-width: 768px){
+	.network-member {
+		.network-member-info {
+			position:absolute;
+			top:258px;
+			left:0;
+			z-index:2;
+		}
 	}
 }

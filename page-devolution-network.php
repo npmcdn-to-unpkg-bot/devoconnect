@@ -27,7 +27,7 @@ get_header(); if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	       	'post_type' => 'network',
 			'posts_per_page' => 100,
 			'order' => 'asc',
-			'orderby' => 'title',
+			// 'orderby' => 'title',
 			'meta_key'		=> 'region',
 			'meta_value'	=> 'North',
 	      );
@@ -66,7 +66,7 @@ get_header(); if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	       	'post_type' => 'network',
 			'posts_per_page' => 100,
 			'order' => 'asc',
-			'orderby' => 'title',
+			// 'orderby' => 'title',
 			'meta_key'		=> 'region',
 			'meta_value'	=> 'Scotland',
 	      );
@@ -105,7 +105,7 @@ get_header(); if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	       	'post_type' => 'network',
 			'posts_per_page' => 100,
 			'order' => 'asc',
-			'orderby' => 'title',
+			// 'orderby' => 'title',
 			'meta_key'		=> 'region',
 			'meta_value'	=> 'Wales',
 	      );
@@ -144,7 +144,7 @@ get_header(); if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	       	'post_type' => 'network',
 			'posts_per_page' => 100,
 			'order' => 'asc',
-			'orderby' => 'title',
+			// 'orderby' => 'title',
 			'meta_key'		=> 'region',
 			'meta_value'	=> 'Northern Ireland',
 	      );
@@ -183,7 +183,7 @@ get_header(); if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	       	'post_type' => 'network',
 			'posts_per_page' => 100,
 			'order' => 'asc',
-			'orderby' => 'title',
+			// 'orderby' => 'title',
 			'meta_key'		=> 'region',
 			'meta_value'	=> 'Connect',
 	      );
@@ -214,10 +214,11 @@ get_header(); if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		 
 		 
 		<?php if(get_field('call_to_action')) { ?>
-			<br/><br/><br/>
+			<br/><br/>
 			<hr/>
+			<br/>
 			<div class="row call-to-action">
-				<div class="col-sm-12 text-center">
+				<div class="col-sm-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 text-center">
 					<?php the_field('call_to_action'); ?>
 				</div>
 			</div>

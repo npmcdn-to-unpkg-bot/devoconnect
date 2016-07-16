@@ -21,12 +21,22 @@ img.devo-intelligence {
 	article {
 		float:none;
 		margin-bottom:25px;
-	
+		
+		.article-img-link {
+			display:block;
+			background:$main;
+			margin-bottom:15px;
+			
+			&:hover {
+				img {
+					opacity:0.8;
+				}
+			}
+		}
 		img.wp-post-image {
 			max-width:100%;
 			min-width:100%;
 			height:auto;
-			margin-bottom:15px;
 		}
 		h2 {
 			font-size:20px;

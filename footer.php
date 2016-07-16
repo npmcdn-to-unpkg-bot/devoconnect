@@ -1,6 +1,6 @@
 </div><!-- content -->
 <footer>
-  <section class="container footer-bottom">
+  <div class="container footer-bottom">
     <hr>
 	
 	<?php if (is_page_template( 'page-gmc.php' )) { ?>
@@ -17,7 +17,7 @@
 			<?php
 			  $args = array(
 				'menu' => 'footer menu',
-				'menu_class' => 'nav nav-pills pull-right',
+				'menu_class' => 'nav nav-pills',
 				'container' => 'false',
 			  );
 			  wp_nav_menu($args);
@@ -27,10 +27,8 @@
 		
 	<?php } ?>
 		
-  </section>
+  </div>
 </footer>
-<br>
-</div><!-- /.container -->
 <?php wp_footer(); ?>
 </body>
 </html>
