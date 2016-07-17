@@ -10,9 +10,10 @@ get_header(); if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
     <div class="container">
    
-		<h1 class="text-center text-accent"><?php the_title(); ?></h1>
+		
 		<div class="row">
 			<div class="col-sm-12 col-md-10 col-md-offset-1 text-center">
+				<h1><?php if(get_field('alternative_title')) { the_field('alternative_title'); } else { the_title(); } ?></h1>	
 				<?php the_content(); ?>
 			</div>
 		</div>

@@ -12,9 +12,9 @@ get_header(); ?>
 
 	<div class="devo-intro">
 		<div class="carousel">
-			<div class="slide" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/carousel/speed.jpg)"></div>
-			<div class="slide" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/carousel/river.jpg)"></div>
-			<div class="slide" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/carousel/sunset.jpg)"></div>
+			<div class="slide" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/carousel/river-night.jpg)"></div>
+		<!--	<div class="slide" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/carousel/river.jpg)"></div>
+			<div class="slide" style="background-image:url(<?php bloginfo('template_directory'); ?>/assets/img/carousel/sunset.jpg)"></div> -->
 		</div>
 		<div class="caption">
 			<div class="container">
