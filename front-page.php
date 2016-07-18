@@ -105,8 +105,13 @@ get_header(); ?>
 		<div class="text-center">
 			<a href="<?php bloginfo('url'); ?>/news/" class="btn btn-primary">View more Articles</a>
 		</div>
-	
 		<br/>
+		<div class="twitter-feed clearfix">
+			<h3 class="text-center text-accent">Twitter: <a href="https://twitter.com/DevoConnect">@DevoConnect</a></h3>
+		
+		    <?php if ( ! dynamic_sidebar( 'twitter' )  ) : ?><?php endif; ?>
+		</div>		
+		<br/><br/>
 	  <hr/>
   	<?php include('partials/signup.php');?>
 <?php endwhile; endif; ?>	

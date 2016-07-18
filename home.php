@@ -39,5 +39,13 @@ get_header(); ?>
         <?php blaze_paginate($query); ?>
         <br class="clear" />
     </nav>
+	<br/>
+	<hr/>
+	<div class="twitter-feed clearfix">
+		<h3 class="text-center text-accent">Twitter: <a href="https://twitter.com/DevoConnect">@DevoConnect</a></h3>
+	
+	    <?php if ( ! dynamic_sidebar( 'twitter' )  ) : ?><?php endif; ?>
+	</div>
+	
 </div>
 <?php get_footer(); ?>
