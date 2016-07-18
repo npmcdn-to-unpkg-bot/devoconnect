@@ -30,7 +30,7 @@ get_header(); ?>
 				<?php if ($author_badge) { ?>
 					<img src="<?php echo $image[0]; ?>" alt="<?php the_author(); ?>" class="profilepic img-circle" />
 				<?php } ?>
-				<p><small>by <strong><?php the_author(); ?></strong> on <?php the_time('F j, Y'); ?></small>, posted in <?php the_category( ', ' ); ?> categories</p>
+				<p><?php if($author_id == '1') { echo '&nbsp;&nbsp;'; } else { ?>by <strong><?php the_author(); ?></strong><?php } ?> on <?php the_time('F j, Y'); ?></small>, posted in <?php the_category( ', ' ); ?> categories</p>
 			</div>
 			 
          	 <?php the_content(); ?>
@@ -42,6 +42,11 @@ get_header(); ?>
 		  
 			  <br/><br/>
 			  <?php echo do_shortcode('[ssba]'); ?>
+			  
+			  <div class="page-navigation clearfix">
+					<span class="nav-previous"><?php previous_post_link('%link','&laquo; %title', true); ?></span>
+					<span class="nav-next"><?php next_post_link('%link','%title &raquo;', true); ?></span>
+				</div>
 
         <?php endwhile; endif; ?>
     </div>

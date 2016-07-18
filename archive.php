@@ -35,7 +35,7 @@ get_header(); ?>
 					}
 				?>	
 				<h2><a href="<?php the_permalink() ;?>"><?php the_title(); ?></a></h2>
-				<p class="text-accent"><small>by <strong><?php the_author(); ?></strong> on <?php the_time('F j, Y'); ?></small></p>
+				<p class="text-accent"><?php $author_id = get_the_author_meta( 'ID' ); if($author_id == '1') { } else { ?>by <strong><?php the_author(); ?></strong><?php } ?> on <?php the_time('F j, Y'); ?></small></p>
 			<?php the_excerpt(); ?>
 			</article>
 			<hr>
