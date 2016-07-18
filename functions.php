@@ -337,6 +337,15 @@ function web_widgets_init() {
 		'before_title'  => '<h2>',
 		'after_title'   => '</h2>',
 	) );
+	
+	register_sidebar( array(
+		'name'          => 'Twitter',
+		'id'            => 'twitter',
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<p class="hidden">',
+		'after_title'   => '</p>',
+	) );
 }
 add_action( 'widgets_init', 'web_widgets_init' );
 

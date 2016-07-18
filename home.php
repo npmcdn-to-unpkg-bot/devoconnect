@@ -9,9 +9,8 @@ get_header(); ?>
 
   <div class="container">
 		
-        <header class="page-header">
-			<h1 class="text-center text-accent"><?php _e('Devolution Intelligence', 'DevoConnect'); ?></h1>
-			<p class="text-center"><?php _e('The latest news and views from DevoIntelligence.', 'DevoConnect'); ?></p>
+        <header class="page-header text-center">
+			<h1>Latest News and Views</h1>
 			
 			<img src="<?php bloginfo('template_directory'); ?>/assets/img/devo-intelligence.jpg" alt="Devo Intelligence" class="devo-intelligence" />
 			

@@ -36,6 +36,9 @@
 		left: 50%;
 		margin-left:-16px;
 		}
+		img {
+			border-radius:0;
+		}
 	}
 	&:hover .network-member-info {
 		opacity:1;
