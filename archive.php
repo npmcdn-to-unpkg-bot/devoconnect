@@ -29,17 +29,21 @@ get_header(); ?>
         
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<article class="post-excerpt">
-				<?php 
-					if ( has_post_thumbnail() ) {
-						the_post_thumbnail('large');
-					}
-				?>	
+				<?php if ( has_post_thumbnail() ) { ?>
+					<a href="<?php the_permalink() ;?>" class="article-img-link"><?php the_post_thumbnail('large'); ?></a>
+				<?php }	?>	
 				<h2><a href="<?php the_permalink() ;?>"><?php the_title(); ?></a></h2>
 				<p class="text-accent"><?php $author_id = get_the_author_meta( 'ID' ); if($author_id == '1') { } else { ?>by <strong><?php the_author(); ?></strong><?php } ?> on <?php the_time('F j, Y'); ?></small></p>
 			<?php the_excerpt(); ?>
 			</article>
 			<hr>
         <?php endwhile; endif; ?>
+		
+	    <nav class="pagination">
+	        <?php blaze_paginate($query); ?>
+	        <br class="clear" />
+	    </nav>
+		
     </div>
     <div class="col-sm-4 sidebar">
       <?php get_sidebar(); ?>

@@ -3,7 +3,7 @@
   <div class="container footer-bottom">
     <hr>
 	
-	<?php if (is_page_template( 'page-gmc.php' )) { ?>
+	<?php if (is_page_template( 'page-gmc.php-OFF' )) { ?>
 		<div class="text-center">
 			<p class="btn">&copy; <?php echo date("Y"); ?> Gill Morris Communications</p>
 		</div>		  

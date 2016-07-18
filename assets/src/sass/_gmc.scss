@@ -8,6 +8,7 @@
 		
 		div {
 			@include hoverFadeMouseOff;
+			text-align:center;
 		
 			&:hover {
 				@include hoverFadeMouseOn;
@@ -21,6 +22,14 @@
 			&:nth-child(3) {
 				background-color: $devoGreen;
 			}
+			a {
+				color:#fff;
+				display:block;
+				
+				&:hover {
+					text-decoration:none;
+				}
+			}
 		}
 	}
 	.btn {
@@ -28,7 +37,7 @@
 		margin-bottom:40px;
 	}
 	.gallery {
-		margin-top:50px;
+		margin-top:20px;
 		
 		.gallery-item {
 			margin-bottom:25px;
@@ -38,5 +47,9 @@
 				min-width:100%;
 			}
 		}
+	}
+	.contacts {
+		font-size:1.4em;
+		margin-bottom:50px;
 	}
 }
