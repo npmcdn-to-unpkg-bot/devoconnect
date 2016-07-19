@@ -10,9 +10,10 @@ get_header(); ?>
   <div class="container">
 		
         <header class="page-header text-center">
-			<h1>Latest News and Views</h1>
 			
 			<img src="<?php bloginfo('template_directory'); ?>/assets/img/devo-intelligence.jpg" alt="Devo Intelligence" class="devo-intelligence" />
+			
+			<h1>News and Views</h1>
 			
 			<hr/>
 			<?php include('partials/signup.php');?>
@@ -42,7 +43,7 @@ get_header(); ?>
 	<br/>
 	<hr/>
 	<div class="twitter-feed clearfix">
-		<h3 class="text-center text-accent">Twitter: <a href="https://twitter.com/DevoConnect">@DevoConnect</a></h3>
+		<h3 class="text-center text-accent">Follow us on Twitter: <a href="https://twitter.com/DevoConnect">@DevoConnect</a></h3>
 	
 	    <?php if ( ! dynamic_sidebar( 'twitter' )  ) : ?><?php endif; ?>
 	</div>

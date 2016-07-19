@@ -21,7 +21,7 @@ get_header(); if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<br/>
 		<hr/>
 		
-		<h2 class="text-center text-accent">Devo North</h2>
+		<h2 class="text-center text-accent"><img src="<?php bloginfo('template_directory'); ?>/assets/img/logo-header.png" alt="Devo Connect" width="100" height="auto"> North</h2>
    	
 	    <?php 
 	      $args = array(
@@ -39,11 +39,11 @@ get_header(); if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		  	<div class="network-members">
 			  <div class="row">
 				  <?php while ( $the_query->have_posts() ) : $the_query->the_post(); $networkcount++; ?>
-					<div class="col-sm-4 network-member">
+					<div class="col-sm-4 <?php if($networkcount == 4) { echo 'col-sm-offset-2'; } ?> network-member">
 						<?php if ( has_post_thumbnail() ) { ?>
 							<?php the_post_thumbnail('thumbnail'); ?>
 						<?php }	?>
-						<h2><?php the_title(); ?></h2>
+						<h3><?php the_title(); ?></h3>
 						<?php if(get_field('caption')) { ?>
 							<p><?php the_field('caption'); ?></p>
 						<?php } ?>
@@ -60,7 +60,7 @@ get_header(); if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		 <br/>
 		 <hr/>
 		 
-		 <h2 class="text-center text-accent">Devo Scotland</h2>
+		 <h2 class="text-center text-accent"><img src="<?php bloginfo('template_directory'); ?>/assets/img/logo-header.png" alt="Devo Connect" width="100" height="auto"> Scotland</h2>
    	
 	    <?php 
 	      $args = array(
@@ -82,7 +82,7 @@ get_header(); if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 						<?php if ( has_post_thumbnail() ) { ?>
 							<?php the_post_thumbnail('thumbnail'); ?>
 						<?php }	?>
-						<h2><?php the_title(); ?></h2>
+						<h3><?php the_title(); ?></h3>
 						<?php if(get_field('caption')) { ?>
 							<p><?php the_field('caption'); ?></p>
 						<?php } ?>
@@ -99,9 +99,10 @@ get_header(); if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		 <br/>
 		 <hr/>
 		 
-		 <h2 class="text-center text-accent">Devo Wales</h2>
+		 <h2 class="text-center text-accent"><img src="<?php bloginfo('template_directory'); ?>/assets/img/logo-header.png" alt="Devo Connect" width="100" height="auto"> Wales</h2>
    	
 	    <?php 
+		
 	      $args = array(
 	       	'post_type' => 'network',
 			'posts_per_page' => 100,
@@ -117,11 +118,11 @@ get_header(); if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		  	<div class="network-members">
 			  <div class="row">
 				  <?php while ( $the_query->have_posts() ) : $the_query->the_post(); $networkcount++; ?>
-					<div class="col-sm-4 network-member">
+					<div class="col-sm-4 <?php if($networkcount == 1) { echo 'col-sm-offset-2'; } ?> network-member">
 						<?php if ( has_post_thumbnail() ) { ?>
 							<?php the_post_thumbnail('thumbnail'); ?>
 						<?php }	?>
-						<h2><?php the_title(); ?></h2>
+						<h3><?php the_title(); ?></h3>
 						<?php if(get_field('caption')) { ?>
 							<p><?php the_field('caption'); ?></p>
 						<?php } ?>
@@ -138,7 +139,7 @@ get_header(); if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		 <br/>
 		 <hr/>
          
-		 <h2 class="text-center text-accent">Devo Northern Ireland</h2>
+		 <h2 class="text-center text-accent"><img src="<?php bloginfo('template_directory'); ?>/assets/img/logo-header.png" alt="Devo Connect" width="100" height="auto"> Northern Ireland</h2>
    	
 	    <?php 
 	      $args = array(
@@ -156,11 +157,11 @@ get_header(); if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		  	<div class="network-members">
 			  <div class="row">
 				  <?php while ( $the_query->have_posts() ) : $the_query->the_post(); $networkcount++; ?>
-					<div class="col-sm-4 network-member">
+					<div class="col-sm-4 <?php if($networkcount == 1) { echo 'col-sm-offset-4'; } ?> network-member">
 						<?php if ( has_post_thumbnail() ) { ?>
 							<?php the_post_thumbnail('thumbnail'); ?>
 						<?php }	?>
-						<h2><?php the_title(); ?></h2>
+						<h3><?php the_title(); ?></h3>
 						<?php if(get_field('caption')) { ?>
 							<p><?php the_field('caption'); ?></p>
 						<?php } ?>
@@ -177,7 +178,7 @@ get_header(); if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		 <br/>
 		 <hr/>
 		 
-		 <h2 class="text-center text-accent">Devo Connect</h2>
+		 <h2 class="text-center text-accent"><img src="<?php bloginfo('template_directory'); ?>/assets/img/logo-header.png" alt="Devo Connect" width="100" height="auto"></h2>
    	
 	    <?php 
 	      $args = array(
@@ -199,7 +200,7 @@ get_header(); if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 						<?php if ( has_post_thumbnail() ) { ?>
 							<?php the_post_thumbnail('thumbnail'); ?>
 						<?php }	?>
-						<h2><?php the_title(); ?></h2>
+						<h3><?php the_title(); ?></h3>
 						<?php if(get_field('caption')) { ?>
 							<p><?php the_field('caption'); ?></p>
 						<?php } ?>

@@ -107,7 +107,7 @@ get_header(); ?>
 		</div>
 		<br/>
 		<div class="twitter-feed clearfix">
-			<h3 class="text-center text-accent">Twitter: <a href="https://twitter.com/DevoConnect">@DevoConnect</a></h3>
+			<h3 class="text-center text-accent">Follow us on Twitter: <a href="https://twitter.com/DevoConnect">@DevoConnect</a></h3>
 		
 		    <?php if ( ! dynamic_sidebar( 'twitter' )  ) : ?><?php endif; ?>
 		</div>		

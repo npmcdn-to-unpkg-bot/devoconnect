@@ -1,16 +1,23 @@
+ .page-template-page-devolution-network {
+	h2 {
+		padding-top:5px;
+		
+		img {
+			position:relative;
+			top:-5px;
+		}
+	}
+ }
 .network-member {
 	position:relative;
 	text-align:center;
-	margin:40px 0 0 0;
+	margin-top:40px;
 	
 	img {
 		max-width:100%;
 		display:block;
 		margin:0 auto;
 		border-radius:200px;
-	}
-	h2 {
-		font-size:24px;
 	}
 	.network-member-info {
 		opacity:0;

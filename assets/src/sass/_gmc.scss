@@ -9,17 +9,22 @@
 		div {
 			@include hoverFadeMouseOff;
 			text-align:center;
+			width:165px;
+			height:165px;
 		
 			&:hover {
 				@include hoverFadeMouseOn;
 			}	
 			&:nth-child(1) {
-				background-color: $devoPurple;
+				background-color: #004549;
 			}
 			&:nth-child(2) {
-				background-color: $main;
+				background-color: $devoPurple;
 			}
 			&:nth-child(3) {
+				background-color: $main;
+			}
+			&:nth-child(4) {
 				background-color: $devoGreen;
 			}
 			a {
