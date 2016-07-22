@@ -1,5 +1,10 @@
+.page-template-page-our-services .row-high {
+	margin-top:0;
+	margin-bottom:0;
+}
 .services-bullet {
-
+	margin-bottom:20px;
+	
 	p {
 		font-size: 18px;
 	}
@@ -14,5 +19,14 @@
 		text-align:center;
 		line-height:46px;
 		font-weight: bold;
+	}
+}
+@media (min-width: 768px){
+	.page-template-page-our-services .row-high {
+		margin-top:30px;
+		margin-bottom:30px;
+	}
+	.services-bullet {
+		margin-bottom:0px;
 	}
 }

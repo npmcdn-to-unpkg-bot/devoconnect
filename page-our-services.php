@@ -20,12 +20,14 @@ get_header(); if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
             <div class="row row-high">
               <?php $count=1; while ( have_rows('services_bullets') ) : the_row(); ?>
               <div class="col-sm-4 services-bullet">
-                <div class="col-sm-3">
-                  <div class="count"><?php echo $count; ?></div>
-                </div>
-                <div class="col-sm-9">
-                  <p><?php the_sub_field('services_bullet') ?></p>
-                </div>   
+                <div class="row">
+					<div class="col-xs-2 col-sm-3">
+					  <div class="count"><?php echo $count; ?></div>
+					</div>
+					<div class="col-xs-10 col-sm-9">
+					  <p><?php the_sub_field('services_bullet') ?></p>
+					</div>   
+				</div>
              </div>
            <?php if($count%3 == 0){ echo '</div><div class="row row-high">' ;} ?>
            <?php $count++; endwhile; ?>

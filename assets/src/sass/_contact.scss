@@ -23,10 +23,18 @@
 	}
 	.contact-details {
 		margin:40px 0;
-		font-size:24px;
+		font-size:20px;
 	
 		p {
 			margin-bottom:1em;
+		}
+	}
+}
+@media (min-width: 768px){
+	.contact-information {
+	
+		.contact-details {
+			font-size:24px;
 		}
 	}
 }

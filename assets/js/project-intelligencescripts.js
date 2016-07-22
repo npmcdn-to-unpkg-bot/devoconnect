@@ -3,7 +3,7 @@
 		$('.articles').masonry({
 			// options
 			itemSelector: 'article',
-			columnWidth: '.col-sm-3',
+			columnWidth: '.column-width',
 			percentPosition: true
 		});
 	});

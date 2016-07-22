@@ -216,7 +216,7 @@ get_header(); if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		 
 		 
 		<?php if(get_field('call_to_action')) { ?>
-			<br/><br/>
+			<br/><br class="hidden-xs" />
 			<hr/>
 			<br/>
 			<div class="row call-to-action">

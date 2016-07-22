@@ -21,7 +21,7 @@ get_header(); ?>
 		<div class="row">
 			<div class="articles">
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-					<article class="post-excerpt <?php if(get_field('featured')) { echo 'col-sm-6'; } else { echo 'col-sm-3'; } ?>">
+					<article class="post-excerpt <?php if(get_field('featured')) { echo 'col-sm-6'; } else { echo 'column-width col-sm-6 col-md-3'; } ?>">
 						<?php if ( has_post_thumbnail() ) { ?>
 							<a href="<?php the_permalink() ;?>" class="article-img-link">
 								<?php if(get_field('featured')) { the_post_thumbnail('featuredimage'); } else { the_post_thumbnail('medium'); } ?>

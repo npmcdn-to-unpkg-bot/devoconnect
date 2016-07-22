@@ -87,7 +87,7 @@ a.header-logo {
 }
 .page-template-page-gmc {
 	a.header-logo {
-		width:250px;
+		width:150px;
 	}
 }
 .navbar {
@@ -147,8 +147,10 @@ a.header-logo {
 
 			}	
 		}
+		.page-template-page-gmc {
+			a.header-logo {
+				width:250px;
+			}
+		}
 	}
 }
-/* .page-template-page-gmc .navbar {
-	background:$mainAccent;
-} */
