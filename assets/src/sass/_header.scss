@@ -147,10 +147,12 @@ a.header-logo {
 
 			}	
 		}
-		.page-template-page-gmc {
-			a.header-logo {
-				width:250px;
-			}
+	}
+}
+@media (min-width: 768px){
+	.page-template-page-gmc {
+		a.header-logo {
+			width:250px;
 		}
 	}
 }
