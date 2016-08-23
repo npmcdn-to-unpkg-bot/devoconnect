@@ -311,6 +311,7 @@ remove_action( 'wp_print_styles', 'print_emoji_styles' );
 
 // Custom Post Types
 function create_posttype() {
+
   register_post_type( 'network',
     array(
       'labels' => array(
@@ -321,6 +322,18 @@ function create_posttype() {
       'has_archive' => false,
       'supports' => array('title', 'editor', 'thumbnail'),
       'rewrite' => array('slug' => 'network')
+    )
+  );
+  register_post_type( 'events',
+    array(
+      'labels' => array(
+        'name' => __( 'Events' ),
+        'singular_name' => __( 'Event' )
+      ),
+      'public' => true,
+      'has_archive' => false,
+      'supports' => array('title', 'editor', 'thumbnail'),
+      'rewrite' => array('slug' => 'events')
     )
   );
 }
