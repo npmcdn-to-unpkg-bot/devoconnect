@@ -55,8 +55,9 @@ get_header(); ?>
         ?>
         <article>
             <h3><a href="<?php the_permalink() ;?>"><?php the_title(); ?></a></h3>
+            <h4 class="event-subtitle"><?php if(get_field('event_subtitle')) : the_field('event_subtitle'); endif; ?></h4>
             <p class="text-accent"><?php $author_id = get_the_author_meta( 'ID' ); if($author_id == '1') { } else { ?>by <strong><?php the_author(); ?></strong><?php } ?> on <?php the_field('event_date'); ?></small></p>
-            <?php the_excerpt(); ?>
+            <?php the_content('<br/>READ MORE &raquo;'); ?>
             <hr/>
         </article>
         <?php endwhile; endif; ?>
